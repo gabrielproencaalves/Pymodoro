@@ -17,32 +17,32 @@ Insert:
 
 
 1 {
-
-	sleep(1500)
-	sinal sonoro
-	sinal visual
-	retornar ao menu
+	for:
+		sleep(1500)
+		sinal sonoro
+		sinal visual
+		retornar ao menu
 
 }
 
 2 {
-
-	sleep(300)
-	sinal sonoro
-	sinal visual
-	retornar ao menu
+	for:
+		sleep(300)
+		sinal sonoro
+		sinal visual
+		retornar ao menu
 
 }
 
 3 {
-
-	sleep(1500)
-	sinal sonoro_1
-	sinal visual_1
-	sleep(300)
-	sinal sonoro_2
-	sinal visual_2
-	retornar ao menu
+	for:
+		sleep(1500)
+		sinal sonoro_1
+		sinal visual_1
+		sleep(300)
+		sinal sonoro_2
+		sinal visual_2
+		retornar ao menu
 
 }
 
