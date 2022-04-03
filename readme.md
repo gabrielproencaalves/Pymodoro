@@ -16,6 +16,21 @@ Insert:
 
 
 
+--------------------------------
+           AUDIO LIST
+--------------------------------
+1 - Alarm_Clock_Beep
+2 - Alarm_Digital_Beep
+3 - Facility_Alarm
+4 - Interface_Hint_Notification
+5 - Scanning_Sci_Fi_Alarm
+6 - Warning_Alarm_Buzzer
+--------------------------------
+Insert: 
+
+
+
+
 1 {
 	for:
 		sleep(1500)
@@ -56,6 +71,7 @@ Insert:
 		sinal sonoro_2
 		sinal visual_2
 		if ctrl+c:
-			retornar ao menu
+		retornar ao menu
 
 }
+
