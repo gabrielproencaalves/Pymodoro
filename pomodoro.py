@@ -2,6 +2,7 @@ from blibs.gui import *         #| 25m = 1500s
 from blibs.bin import *         #| 05m = 0300s
 from time import sleep          #|
 from playsound import playsound #|
+from blibs.file import *        #|
 #------------------------------------> IMPORTs
 audio_list = ['Alarm_Clock_Beep', 
               'Alarm_Digital_Beep',
@@ -13,17 +14,13 @@ audio_list = ['Alarm_Clock_Beep',
 
 
 while True:
-    try:
-        title(texto='AUDIO LIST', tamfai=32, faixa='-')
-        menu(lista=audio_list)
-        Audio_Set = ('blibs/sfx/' + audio_list[leiaint('Insert [1-6]: ')-1] + '.wav')
-    except:
-        print('INVALID OPTION!')
-    else:
-        break
+    Audio_Set = arch_read('audio.conf')
 
 
-while True:
+
+
+
+    #('blibs/sfx/' + audio_list[leiaint('Insert [1-6]: ')-1] + '.wav')
     title(texto='POMODORO', tamfai=32, faixa='-')
     menu(lista=['- 25 MIN ONLY',
                 '- 5 MIN ONLY',
@@ -56,6 +53,18 @@ while True:
         print('\nOperation Interrupted!\n')
 
 
+
+    if UserInput == 5:
+        while True:
+            title(texto='AUDIO LIST', tamfai=32, faixa='-')
+            menu(lista=audio_list)
+            User_Input = leiaint__('Insert [1 - 6]: ')
+            if User_Input < 1 or User_Input > 6:
+                print('INVALID OPTION!')
+            else:
+                arch_clear('audio.conf')                                                           
+                arch_write('audio.conf', 'blibs/sfx/' + audio_list[User_Input - 1] + '.wav')
+                break
 
     if UserInput == 6:
         if confirm(ui=['Are you sure? [y/n]', 'Insert: '], yes='y', no='n'):

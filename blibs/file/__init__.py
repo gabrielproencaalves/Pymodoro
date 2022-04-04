@@ -1,55 +1,58 @@
 from ..gui import *
 
 
-def arquivoexiste(arquivo='', param='rt'):
+
+def arch_test(arquivo, param='rt'):
     try:
-        f = open(arquivo, param, encoding='utf-8')
-        f.close()
+        arch = open(arquivo, param, encoding='utf-8')
+        arch.close()
     except FileNotFoundError:
         return False
     else:
         return True
 
 
-def criarquivo(arquivo):
+
+def arch_create(arquivo):
     try:
-        c = open(arquivo, 'wt+')
-        c.close()
+        arch = open(arquivo, 'wt+')
+        arch.close()
     except:
-        print("Error: the file was didn't created!")
+        print(f"Error: the file {arquivo} was didn't created!")
     else:
         print(f"Archive {arquivo} was created successfully!")
 
 
-def lerarquivo(arquivo):
+
+def arch_read(arquivo):
     try:
-        r = open(arquivo, 'rt')
+        arch = open(arquivo, 'rt')
     except:
-        print('ERROR: opening the file')
+        print(f'ERROR: opening the file: {arquivo}')
     else:
-        print(r)
+        for linha in arch:
+            return linha
     finally:
-        r.close()
+        arch.close()
 
 
-def cadastrar(arquivo, dados):
+
+def arch_write(arquivo, dados):
     try:
-        c = open(arquivo, 'at')
+        arch = open(arquivo, 'at')
     except:
-        print(f'Houve um erro ao escrever no arquivo: {arquivo}')
+        print(f"ERROR: coudn't write in: {arquivo}")
     else:
-        c.write(dados[0])
-        c.write(';')
-        c.write(dados[1])
-        c.write('\n')
+        arch.write(dados)
     finally:
-        c.close()
+        arch.close()
 
 
-def limpar(arquivo):
+
+def arch_clear(arquivo):
     try:
         arch = open(arquivo, 'wt')
     except FileNotFoundError:
-        return f'{arquivo} não foi encontrado.'
+        return f'ERROR: {arquivo} not found.'
     else:
         arch = ''

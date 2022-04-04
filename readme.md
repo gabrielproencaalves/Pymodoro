@@ -75,3 +75,7 @@ Insert:
 
 }
 
+
+Alterar audios no audacity (deixar todos do mesmo tamanho)
+finalizar programa
+achar possíveis bugs

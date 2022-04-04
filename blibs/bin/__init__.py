@@ -56,6 +56,24 @@ def leiaint(texto):
             break
 
 
+def leiaint__(texto):
+    """
+    Função que valida se o dado digitado é um número inteiro.
+    :param texto: É o que será mostrado ao usuário antes de digitar os dados
+    """
+    while True:
+        try:
+            Valor = int(input(texto))
+        except (KeyboardInterrupt, TypeError):
+            break
+        except ValueError:
+            print('\033[1;31mERRO: dado(s) inválido(s), tente novamente!\033[m')
+        else:
+            return Valor
+            break
+
+
+
 def leiastr(texto='Digite: '):
     """
     Função que valida se o dado digitado é uma cadeia de caracteres.
@@ -63,17 +81,17 @@ def leiastr(texto='Digite: '):
     """
     while True:
         try:
-            textu = str(input(texto))
+            _texto = str(input(texto))
         except(KeyboardInterrupt):
             print('\nInserção de dados interrompida pelo usuário.')
         except:
             print('\033[1;31mERRO: dado(s) inválido(s), tente novamente!\033[m')
         else:
-            if textu in '':
+            if _texto in '':
                 print('\033[1;31mERRO: dado(s) inválido(s), tente novamente!\033[m')
                 continue
             else:
-                return textu
+                return _texto
 
 
 
