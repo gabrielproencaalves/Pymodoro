@@ -1,5 +1,6 @@
 from ..gui import *
-
+import os
+from playsound import playsound
 
 def confirm(ui=['', 'Resposta: '], yes='yes', no='no'):
     title(ui[0], 32, '~')
@@ -64,8 +65,6 @@ def leiaint__(texto):
     while True:
         try:
             Valor = int(input(texto))
-        except (KeyboardInterrupt, TypeError):
-            break
         except ValueError:
             print('\033[1;31mERRO: dado(s) inválido(s), tente novamente!\033[m')
         else:
@@ -94,4 +93,15 @@ def leiastr(texto='Digite: '):
                 return _texto
 
 
+def notify(title='Title', message='Message', delay=5000):
+    os.system(f"notify-send '{title}' '{message}' -t {delay}")
+
+
+def alarm(audio, seconds=10):
+    for replay in range(0, seconds, 1):
+        playsound(audio)
+
+
+def clear_scrn():
+    os.system('clear')
 
