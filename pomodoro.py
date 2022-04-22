@@ -5,7 +5,7 @@ from time import sleep          #|
 from playsound import playsound #|
 from blibs.file import *        #|
 #------------------------------------> IMPORTs
-
+clear_scrn()
 
 audio_list = ['Alarm_Clock_Beep', 
               'Alarm_Digital_Beep',

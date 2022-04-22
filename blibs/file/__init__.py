@@ -56,5 +56,3 @@ def arch_clear(arquivo):
         return f'ERROR: {arquivo} not found.'
     else:
         arch = ''
-    finally:
-        arch.close()
