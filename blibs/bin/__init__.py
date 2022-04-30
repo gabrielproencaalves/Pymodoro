@@ -1,6 +1,7 @@
 from ..gui import *
 import os
 from playsound import playsound
+from datetime import datetime
 
 def confirm(ui=['', 'Resposta: '], yes='yes', no='no'):
     title(ui[0], 32, '~')
@@ -99,9 +100,13 @@ def notify(title='Title', message='Message', delay=5000):
 
 def alarm(audio, seconds=10):
     for replay in range(0, seconds, 1):
-        playsound(audio)
-
+        try: 
+            playsound(audio)
+        except KeyboardInterrupt:
+            break
 
 def clear_scrn():
     os.system('clear')
 
+def show_time():
+     print(str(datetime.today())[0:16])
