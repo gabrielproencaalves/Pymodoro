@@ -31,7 +31,7 @@ def leiafloat(texto):
         try:
             Valor = float(str(input(texto)).replace(',', '.'))
         except KeyboardInterrupt:
-            print('\nInserção de dados interrompida pelo usuário.')
+            print('\nKeyboard interruption detected!')
             return 0
         except:
             print('\033[1;31mERRO: dado(s) inválido(s), tente novamente!\033[m')
@@ -49,7 +49,7 @@ def leiaint(texto):
         try:
             Valor = int(input(texto))
         except KeyboardInterrupt:
-            print('\nInserção de dados interrompida pelo usuário.')
+            print('\nKeyboard interruption detected!')
             return 0
         except:
             print('\033[1;31mERRO: dado(s) inválido(s), tente novamente!\033[m')
@@ -83,7 +83,7 @@ def leiastr(texto='Digite: '):
         try:
             _texto = str(input(texto))
         except(KeyboardInterrupt):
-            print('\nInserção de dados interrompida pelo usuário.')
+            print('\nKeyboard interruption detected!')
         except:
             print('\033[1;31mERRO: dado(s) inválido(s), tente novamente!\033[m')
         else:

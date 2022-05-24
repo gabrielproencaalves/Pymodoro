@@ -117,7 +117,10 @@ while True:
                         
 
                         elif User_Input == 7:
-                            alarm(audio=Audio_Set)
+                            try:
+                                alarm(audio=Audio_Set)
+                            except KeyboardInterrupt:
+                                continue
 
 
                         else:
