@@ -17,10 +17,15 @@ Arch and derivatives:
 ### Installing python playsound:
  *This requires python to be installed first:*
 
-		pip install playsound
+```pip install playsound```
 		
 ### Installing python pygobject
-		pip install pygobjects
+```pip install pygobjects```
+
+## Installing Pymodoro:
+
+```$ chmod +x install.sh```
+```$ ./install.sh```
 
 
 ## How to exec the cli:
