@@ -1,10 +1,11 @@
+#!/bin/python3
 #---------------------------------
 from blibs.gui import *         #| 25m = 1500s
 from blibs.bin import *         #| 05m = 0300s
 from time import sleep          #|
 from blibs.file import *        #|
 #------------------------------------> IMPORTs
-clear_scrn()
+#clear_scrn()
 audio_list = ['Alarm_Clock_Beep', 
               'Alarm_Digital_Beep',
               'Facility_Alarm',
