@@ -10,6 +10,7 @@ Pomodoro timer (CLI application made in Python).
 ### Installing ffmpeg:
 Debian and derivatives:
 ```sudo apt-get install ffmpeg```
+
 Arch and derivatives:
 ```sudo pacman -Sy ffmpeg```
 
