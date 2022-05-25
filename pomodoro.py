@@ -5,14 +5,8 @@ from blibs.bin import *         #| 05m = 0300s
 from time import sleep          #|
 from blibs.file import *        #|
 #------------------------------------> IMPORTs
-#clear_scrn()
-audio_list = ['Alarm_Clock_Beep', 
-              'Alarm_Digital_Beep',
-              'Facility_Alarm',
-              'Interface_Hint_Notification',
-              'Scanning_Sci_Fi_Alarm',
-              'Warning_Alarm_Buzzer',
-              'Test Alarm']
+clear_scrn()
+audio_list = ['Dark','Dreams','Sunflower','Raindrops','Test Alarm']
 
 
 while True:
@@ -49,7 +43,7 @@ while True:
                 for timer in range(0, 1, 1):
                     sleep(1500)
                     notify('TIME OUT!', '25 MINUTES HAVE PASSED!\n', 10000)
-                    alarm(audio=Audio_Set)
+                    alarm(audio=Audio_Set, seconds=1)
                     clear_scrn()
                 show_time()
 
@@ -58,7 +52,7 @@ while True:
                 for timer in range(0, 1, 1):
                     sleep(300)
                     notify('TIME OUT!', '5 MINUTES HAVE PASSED!\n', 10000)
-                    alarm(audio=Audio_Set)
+                    alarm(audio=Audio_Set, seconds=1)
                     clear_scrn()
                 show_time()
 
@@ -67,10 +61,10 @@ while True:
                 for timer in range(0, 1, 1):
                     sleep(1500)
                     notify('TIME OUT!', '25 MINUTES HAVE PASSED!\n', 10000)
-                    alarm(audio=Audio_Set)
+                    alarm(audio=Audio_Set, seconds=1)
                     sleep(300)
                     notify('TIME OUT!', '5 MINUTES HAVE PASSED!\n', 10000)
-                    alarm(audio=Audio_Set)
+                    alarm(audio=Audio_Set, seconds=1)
                 clear_scrn()
                 show_time()
 
@@ -79,10 +73,10 @@ while True:
                 while True:
                     sleep(1500)
                     notify('TIME OUT!', '25 MINUTES HAVE PASSED!\n', 10000)
-                    alarm(audio=Audio_Set)
+                    alarm(audio=Audio_Set, seconds=1)
                     sleep(300)
                     notify('TIME OUT!', '5 MINUTES HAVE PASSED!\n', 10000)
-                    alarm(audio=Audio_Set)
+                    alarm(audio=Audio_Set, seconds=1)
                 clear_scrn()
                 show_time()
 
@@ -104,7 +98,7 @@ while True:
 
 
                     try:
-                        User_Input = leiaint__('Insert [1 - 7]: ')
+                        User_Input = leiaint__('Insert [1 - 5]: ')
                     except KeyboardInterrupt:
                         clear_scrn()
                         break
@@ -113,13 +107,13 @@ while True:
                         break
                     else:
 
-                        if User_Input < 1 or User_Input > 7:
+                        if User_Input < 1 or User_Input > 5:
                             print('INVALID OPTION!')
                         
 
-                        elif User_Input == 7:
+                        elif User_Input == 5:
                             try:
-                                alarm(audio=Audio_Set)
+                                alarm(audio=Audio_Set, seconds=1)
                             except KeyboardInterrupt:
                                 continue
 
