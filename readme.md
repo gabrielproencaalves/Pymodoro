@@ -22,6 +22,7 @@ Arch and derivatives:
 ### Installing python pygobject
 		pip install pygobjects
 
+
 ## How to exec the cli:
 
-```./pymodoro```
+```pomodoro```
